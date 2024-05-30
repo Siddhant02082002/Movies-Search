@@ -9,7 +9,7 @@ const SearchDiv = ({ moviesData,setBool,startP }) => {
     async function submitHandler(event) {
         try {
             event.preventDefault();
-            const data = await axios.get('http://www.omdbapi.com/?apikey=59b63942&', { params: { s: search } })
+            const data = await axios.get('https://www.omdbapi.com/?apikey=59b63942&', { params: { s: search } })
            
             const moviesList = data.data.Search;
             moviesData(moviesList);

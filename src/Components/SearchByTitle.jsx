@@ -9,7 +9,7 @@ const SearchByTitle = ({ moviesData,setBool,startP}) => {
     async function submitHandler(event) {
         try {
             event.preventDefault();
-            const data = await axios.get('http://www.omdbapi.com/?apikey=59b63942&', { params: { t: Title, plot: "full" } })
+            const data = await axios.get('https://www.omdbapi.com/?apikey=59b63942&', { params: { t: Title, plot: "full" } })
             const MovieData = data.data;
             setMoviesData(MovieData);
             console.log(MovieData);
