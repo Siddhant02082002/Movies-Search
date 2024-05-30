@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-const SearchByTitle = ({ moviesData,setBool }) => {
+const SearchByTitle = ({ moviesData,setBool,startP}) => {
     const [Title, setTitle] = useState("");
     const [moviesSearchData, setMoviesData] = useState();
     const searchHandler = (event) => {
@@ -15,6 +15,7 @@ const SearchByTitle = ({ moviesData,setBool }) => {
             console.log(MovieData);
             moviesData(MovieData);
             setBool(0);
+            startP(1);
         }
         catch (error) {
             console.log(error);
